@@ -1,0 +1,52 @@
+Aws sagemaker is a one stop platform where you can perform entirity of a Data science project workflow
+
+feature Engineering--------> model training -------> model tuning --------> deployment ---------> Monitoring 
+
+Advantages of AWS sagemaker
+- has wide range of libraries for ML workflow (No need to install libraries it already have its own libraries just import those)
+- has various built in algorithms for different problems
+- one-click deployment
+- integration with other AWS services
+- has notebook and iDE for development ( jupyter LAb , sagemaker studio (IDE))
+- detailed documentations
+- huge community support
+
+
+
+AWS services:
+1. AWS IAM (Identity & access management)
+- It deals with permissions and access
+- when we login AWS using our email. AWS see as a Root user (A user that has access to all available services)
+
+Now if someone else gets access to our root credentials they can also access all these service but the problem is we pay for these service so we need some kind of security.
+So AWS has given us 3 layer of security keeping this in mind.
+
+SO AWS IAM is a service that allows to create different credentials (sub-profiles) at different levels under to basically handle access and permisions in our own profile depending upon the work needed to be done.
+
+- IAM Group - group of users having access to identical limited services
+- IAM Role - if the project is small and takes few hours or atmost a day IAM role is used
+- IAM User - User having access to  limited services
+
+2. AWS S3 (Simple Storage Service)
+- Virtual container on the cloud where we store and save our files
+- A container is called a bucket 
+
+- We will use S3 to save our Dataset and our best model in a S3 bucket
+
+3.  AWS EC2 (Elastic Cloud Compute)
+- its basically a virtual computer (instance) in the Cloud which we rent to for our computational needs.
+- we can upgrade the cloud rented system or downgrade it as per our needs
+
+- Will use EC2 to train and tune the model
+
+
+SDK(Software development Kit)
+- It is a set of software development tools that allows to create end-to-end  applications for a particular platform.
+
+Using Python we need to interact with following AWS services:
+- S3 bucket
+- IAM Role
+- EC2 instances
+- Sagemaker
+
+how we do it ? ----- Using an AWS SDK called Boto3 (Its a python specific AWS SDK)
